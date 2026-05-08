@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crazedev04.github.io/benfarma/sitemap.xml
