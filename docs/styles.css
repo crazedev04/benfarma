@@ -540,27 +540,14 @@ h3 { letter-spacing: -0.2px; }
   height: 100%;
   border-radius: 21px;
   overflow: hidden;
-  background: #0c1520;
-  position: relative;
-}
-
-.screenshot-screen::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 36px;
-  background: linear-gradient(to bottom, #0c1520 0%, transparent 100%);
-  pointer-events: none;
-  z-index: 1;
+  background: #070c12;
 }
 
 .screenshot-screen img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: 0% 5%;
   display: block;
 }
 
