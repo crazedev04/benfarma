@@ -17,7 +17,9 @@
     <meta property="og:url" content="https://crazedev04.github.io/benfarma" />
     <meta property="og:title" content="BenFarma — Encontrá la farmacia de turno en tu ciudad" />
     <meta property="og:description" content="App gratuita para ver la farmacia de turno, emergencias y avisos en tiempo real." />
-    <meta property="og:image" content="https://crazedev04.github.io/benfarma/assets/logo.png" />
+    <meta property="og:image" content="https://crazedev04.github.io/benfarma/assets/og-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="es_AR" />
     <meta property="og:site_name" content="BenFarma" />
 
@@ -25,14 +27,14 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="BenFarma — Farmacia de turno en tu ciudad" />
     <meta name="twitter:description" content="App gratuita para ver la farmacia de turno, emergencias y avisos en tiempo real." />
-    <meta name="twitter:image" content="https://crazedev04.github.io/benfarma/assets/logo.png" />
+    <meta name="twitter:image" content="https://crazedev04.github.io/benfarma/assets/og-cover.png" />
 
     <!-- PWA -->
     <meta name="theme-color" content="#070c12" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <!-- JSON-LD -->
+    <!-- JSON-LD: App -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -46,6 +48,23 @@
       "url": "https://crazedev04.github.io/benfarma"
     }
     </script>
+
+    <!-- JSON-LD: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BenFarma",
+      "url": "https://crazedev04.github.io/benfarma",
+      "email": "crazedevs@gmail.com",
+      "description": "Desarrolladores de BenFarma, app de farmacias de turno para Argentina."
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <link rel="icon" href="./assets/logo.png" />
     <link rel="preload" as="image" href="./assets/logo.png" />
@@ -68,6 +87,7 @@
           <span></span>
         </label>
         <nav class="topbar-links">
+          <a href="#como-funciona">Cómo funciona</a>
           <a href="#funciones">Funciones</a>
           <a href="#ciudades">Ciudades</a>
           <a href="#capturas">Capturas</a>
@@ -81,7 +101,8 @@
 
       <!-- HERO -->
       <section class="hero">
-        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow--cyan" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow--green" aria-hidden="true"></div>
         <div class="container hero-grid">
           <div class="hero-text fade-in">
             <p class="eyebrow">App gratuita · Android</p>
@@ -116,7 +137,7 @@
           </div>
 
           <!-- Phone mockup -->
-          <div class="hero-visual fade-in fade-delay">
+          <div class="hero-visual slide-from-right">
             <div class="phone-mockup">
               <div class="phone-notch"></div>
               <div class="phone-screen">
@@ -126,6 +147,48 @@
             <div class="phone-float-card">
               <div class="phone-float-dot"></div>
               <span>Farmacia de turno activa</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CÓMO FUNCIONA -->
+      <section id="como-funciona" class="section alt">
+        <div class="container">
+          <div class="section-head fade-in">
+            <p class="eyebrow">Simple y rápido</p>
+            <h2>Cómo funciona</h2>
+          </div>
+          <div class="steps-grid fade-in">
+            <div class="step-card">
+              <span class="step-number">01</span>
+              <div class="step-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              </div>
+              <h3>Descargá la app</h3>
+              <p>Gratis en Google Play para Android. Sin registro obligatorio.</p>
+            </div>
+            <div class="step-arrow" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+            <div class="step-card">
+              <span class="step-number">02</span>
+              <div class="step-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <h3>Elegí tu ciudad</h3>
+              <p>Seleccioná tu localidad y accedé a la información local al instante.</p>
+            </div>
+            <div class="step-arrow" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+            <div class="step-card">
+              <span class="step-number">03</span>
+              <div class="step-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <h3>Consultá en tiempo real</h3>
+              <p>Turnos, emergencias y avisos siempre actualizados.</p>
             </div>
           </div>
         </div>
@@ -325,13 +388,24 @@
         es => es.forEach(e => e.isIntersecting && e.target.classList.add('visible')),
         { threshold: 0.1 }
       );
-      document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+      document.querySelectorAll('.fade-in, .slide-from-right').forEach(el => obs.observe(el));
+
+      // Nav active on scroll
+      const sections = document.querySelectorAll('main section[id]');
+      const navLinks = document.querySelectorAll('.topbar-links a[href^="#"]');
+      const sectionObs = new IntersectionObserver(
+        entries => entries.forEach(e => {
+          if (e.isIntersecting) {
+            navLinks.forEach(l => l.classList.toggle('nav-active', l.getAttribute('href') === '#' + e.target.id));
+          }
+        }),
+        { threshold: 0.4 }
+      );
+      sections.forEach(s => sectionObs.observe(s));
 
       // Back to top
       const btn = document.getElementById('backTop');
-      window.addEventListener('scroll', () => {
-        btn.classList.toggle('visible', window.scrollY > 400);
-      }, { passive: true });
+      window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 400), { passive: true });
       btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     </script>
 

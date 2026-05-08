@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1200" />
+    <title>OG Cover — BenFarma (screenshot this at 1200×630)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        font-family: 'Inter', system-ui, sans-serif;
+        background: #070c12;
+        color: #e6edf3;
+        position: relative;
+      }
+
+      /* Background glows */
+      .glow-cyan {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(25, 192, 212, 0.12) 0%, transparent 70%);
+        top: -150px;
+        right: -100px;
+      }
+
+      .glow-green {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(107, 226, 168, 0.08) 0%, transparent 70%);
+        bottom: -150px;
+        left: -80px;
+      }
+
+      /* Grid lines subtle */
+      .grid-lines {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(35, 50, 66, 0.4) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(35, 50, 66, 0.4) 1px, transparent 1px);
+        background-size: 60px 60px;
+      }
+
+      /* Content */
+      .content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        padding: 60px 80px;
+        gap: 40px;
+      }
+
+      .left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .logo-row {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 4px;
+      }
+
+      .logo-img {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        object-fit: cover;
+      }
+
+      .logo-name {
+        font-size: 22px;
+        font-weight: 700;
+        color: #e6edf3;
+      }
+
+      .logo-tag {
+        font-size: 13px;
+        color: #9aa9b8;
+        margin-top: 2px;
+      }
+
+      .headline {
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        color: #e6edf3;
+      }
+
+      .headline .gradient {
+        background: linear-gradient(135deg, #19c0d4, #6be2a8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .tagline {
+        font-size: 18px;
+        color: #9aa9b8;
+        line-height: 1.5;
+      }
+
+      .badges {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .badge {
+        padding: 7px 14px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 600;
+        border: 1px solid rgba(25, 192, 212, 0.25);
+        background: rgba(25, 192, 212, 0.1);
+        color: #19c0d4;
+      }
+
+      .badge.green {
+        border-color: rgba(107, 226, 168, 0.25);
+        background: rgba(107, 226, 168, 0.1);
+        color: #6be2a8;
+      }
+
+      /* Phone */
+      .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .phone {
+        width: 200px;
+        height: 400px;
+        background: linear-gradient(160deg, #111e2e, #0c1520);
+        border: 1.5px solid #2c4058;
+        border-radius: 34px;
+        padding: 13px 9px 9px;
+        box-shadow:
+          0 40px 80px rgba(0,0,0,0.7),
+          0 0 0 1px rgba(255,255,255,0.04),
+          inset 0 1px 0 rgba(255,255,255,0.06);
+        position: relative;
+        transform: rotate(3deg);
+      }
+
+      .phone-notch {
+        position: absolute;
+        top: 9px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 5px;
+        background: #1a2d3f;
+        border-radius: 3px;
+      }
+
+      .phone-screen {
+        width: 100%;
+        height: 100%;
+        border-radius: 24px;
+        overflow: hidden;
+        background: #070c12;
+      }
+
+      .phone-screen img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+
+      /* Bottom bar */
+      .bottom-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #19c0d4, #6be2a8);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glow-cyan"></div>
+    <div class="glow-green"></div>
+    <div class="grid-lines"></div>
+
+    <div class="content">
+      <div class="left">
+        <div class="logo-row">
+          <img class="logo-img" src="./assets/logo.png" alt="BenFarma" />
+          <div>
+            <div class="logo-name">BenFarma</div>
+            <div class="logo-tag">Buenos Aires, Argentina</div>
+          </div>
+        </div>
+
+        <div class="headline">
+          Encontrá la farmacia<br />
+          de turno en<br />
+          <span class="gradient">tu ciudad.</span>
+        </div>
+
+        <div class="tagline">
+          Turnos, emergencias y avisos<br />en tiempo real. Gratis.
+        </div>
+
+        <div class="badges">
+          <span class="badge green">Gratis</span>
+          <span class="badge">Android</span>
+          <span class="badge">24hs actualizado</span>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <img src="./assets/home.png" alt="App screenshot" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-bar"></div>
+
+    <!--
+      INSTRUCCIONES:
+      1. Abrí este archivo en Chrome/Edge
+      2. Zoom al 100%
+      3. Tomá una screenshot de exactamente 1200×630px
+      4. Guardá como assets/og-cover.png
+    -->
+  </body>
+</html>
