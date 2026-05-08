@@ -494,26 +494,62 @@ h3 { letter-spacing: -0.2px; }
 
 /* ── Screenshots ── */
 .screenshots {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
-.screenshot {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  overflow: hidden;
-  aspect-ratio: 9 / 18;
+.screenshot-phone {
+  width: 165px;
+  height: 340px;
+  background: linear-gradient(160deg, #111e2e, #0c1520);
+  border: 1.5px solid #2c4058;
+  border-radius: 30px;
+  padding: 13px 9px 9px;
+  box-shadow:
+    0 24px 56px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  position: relative;
   transition: transform 0.2s, box-shadow 0.2s;
+  flex-shrink: 0;
 }
 
-.screenshot:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px var(--shadow);
+.screenshot-phone:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 36px 72px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(25, 192, 212, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
-.screenshot-image { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.screenshot-notch {
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 4px;
+  background: #1a2d3f;
+  border-radius: 2px;
+}
+
+.screenshot-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 21px;
+  overflow: hidden;
+  background: #070c12;
+}
+
+.screenshot-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
 
 /* ── CTA card ── */
 .cta-card {
@@ -708,10 +744,10 @@ h3 { letter-spacing: -0.2px; }
 
   /* Screenshot carousel on mobile */
   .screenshots {
-    display: flex;
+    flex-wrap: nowrap;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 12px;
+    justify-content: flex-start;
     padding-bottom: 12px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -719,9 +755,8 @@ h3 { letter-spacing: -0.2px; }
 
   .screenshots::-webkit-scrollbar { display: none; }
 
-  .screenshot {
-    flex: 0 0 72vw;
+  .screenshot-phone {
     scroll-snap-align: center;
-    aspect-ratio: 9 / 18;
+    flex-shrink: 0;
   }
 }
