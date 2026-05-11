@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BenFarma — Abrir enlace</title>
+    <meta name="description" content="Abrí este enlace en BenFarma para ver farmacias, locales y servicios cerca tuyo." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://benfarma.com" />
+    <meta property="og:title" content="BenFarma" />
+    <meta property="og:description" content="Farmacias, locales y servicios cerca tuyo." />
+    <meta property="og:image" content="https://benfarma.com/assets/og-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BenFarma" />
+    <meta name="twitter:description" content="Farmacias, locales y servicios cerca tuyo." />
+    <meta name="twitter:image" content="https://benfarma.com/assets/og-cover.png" />
+    <link rel="icon" href="/assets/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .deeplink-wrap{min-height:100vh;display:grid;place-items:center;padding:32px;background:radial-gradient(circle at top,#12313a 0,#070c12 42%)}
+      .deeplink-card{width:min(560px,100%);border:1px solid rgba(92,225,230,.22);border-radius:28px;background:rgba(15,22,33,.9);box-shadow:0 24px 80px rgba(0,0,0,.35);padding:32px;text-align:center}
+      .deeplink-logo{width:72px;height:72px;border-radius:20px;margin:0 auto 18px;display:block}
+      .deeplink-card h1{margin:0 0 10px;font-size:clamp(28px,7vw,46px)}
+      .deeplink-card p{color:#aebdd0;margin:0 0 24px;line-height:1.55}
+      .deeplink-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    </style>
+  </head>
+  <body>
+    <main class="deeplink-wrap">
+      <section class="deeplink-card">
+        <img class="deeplink-logo" src="/assets/logo.png" alt="BenFarma" />
+        <p class="eyebrow">Enlace compartido</p>
+        <h1 id="title">Abrí BenFarma</h1>
+        <p id="copy">Si tenés la app instalada, este enlace debería abrirse automáticamente. Si no, podés descargarla gratis.</p>
+        <div class="deeplink-actions">
+          <a id="openApp" class="button primary" href="https://play.google.com/store/apps/details?id=com.overcode.farmadolores">Abrir app</a>
+          <a class="button ghost" href="https://play.google.com/store/apps/details?id=com.overcode.farmadolores" target="_blank" rel="noopener noreferrer">Google Play</a>
+          <a class="button ghost" href="/">Ir al sitio</a>
+        </div>
+      </section>
+    </main>
+    <script>
+      (function () {
+        var path = window.location.pathname.replace(/^\/+/, '');
+        var parts = path.split('/').filter(Boolean);
+        var title = document.getElementById('title');
+        var copy = document.getElementById('copy');
+        var openApp = document.getElementById('openApp');
+        var scheme = 'benfarma://' + path;
+        if (parts[0] === 'farmacia' && parts[1]) {
+          title.textContent = 'Abrí esta farmacia en BenFarma';
+          copy.textContent = 'Tocá para ver datos, ubicación y contacto en la app.';
+          scheme = 'benfarma://farmacia/' + encodeURIComponent(parts[1]);
+        } else if (parts[0] === 'local' && parts[1] && parts[2]) {
+          title.textContent = 'Abrí este lugar en BenFarma';
+          copy.textContent = 'Tocá para ver datos, ubicación y contacto en la app.';
+          scheme = 'benfarma://local/' + encodeURIComponent(parts[1]) + '/' + encodeURIComponent(parts[2]);
+        }
+        openApp.href = scheme;
+        setTimeout(function () { window.location.href = scheme; }, 350);
+      })();
+    </script>
+  </body>
+</html>

@@ -1,2 +1,12 @@
-
-Ingresa un dominio para generar un archivo JSON
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.overcode.farmadolores",
+      "sha256_cert_fingerprints": [
+        "73:3B:E7:F9:A0:CD:CE:EB:A4:E7:91:6D:3D:C9:DC:9E:02:62:73:D9:9F:36:3B:4E:74:74:EE:36:4E:D3:02:A2"
+      ]
+    }
+  }
+]
