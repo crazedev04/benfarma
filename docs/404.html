@@ -56,8 +56,22 @@
           copy.textContent = 'Tocá para ver datos, ubicación y contacto en la app.';
           scheme = 'benfarma://local/' + encodeURIComponent(parts[1]) + '/' + encodeURIComponent(parts[2]);
         }
+        var playStore = 'https://play.google.com/store/apps/details?id=com.overcode.farmadolores';
+        var openedApp = false;
+
         openApp.href = scheme;
+
+        function markOpened() { openedApp = true; }
+        document.addEventListener('visibilitychange', function () {
+          if (document.hidden) markOpened();
+        });
+        window.addEventListener('pagehide', markOpened);
+        window.addEventListener('blur', markOpened);
+
         setTimeout(function () { window.location.href = scheme; }, 350);
+        setTimeout(function () {
+          if (!openedApp) window.location.href = playStore;
+        }, 1800);
       })();
     </script>
   </body>
