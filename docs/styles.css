@@ -479,6 +479,30 @@ h3 { letter-spacing: -0.2px; }
   color: var(--accent-2);
 }
 
+/* ── Aviso de ciudad próximamente (landing de ciudad aún sin activar) ── */
+.status-notice {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+  text-align: center;
+}
+
+.status-notice p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.status-notice a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.status-notice a:hover {
+  text-decoration: underline;
+}
+
 /* ── Screenshots ── */
 .screenshots {
   display: flex;

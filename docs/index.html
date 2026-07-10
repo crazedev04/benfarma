@@ -6,7 +6,7 @@
 
     <!-- SEO primario -->
     <title>BenFarma — Encontrá la farmacia de turno en tu ciudad</title>
-    <meta name="description" content="BenFarma es la app gratuita para encontrar la farmacia de turno, emergencias, locales y avisos importantes en tu ciudad. Disponible en Android." />
+    <meta name="description" content="BenFarma es la app gratuita para encontrar la farmacia de turno, emergencias, locales y avisos importantes en 5 ciudades bonaerenses. Disponible en Android, iPhone y Web." />
     <meta name="keywords" content="farmacia de turno, farmacia guardia, BenFarma, farmacias Buenos Aires, turno farmacia, guardia farmacia" />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="BenFarma" />
@@ -17,7 +17,7 @@
     <meta property="og:url" content="https://benfarma.com" />
     <meta property="og:title" content="BenFarma — Encontrá la farmacia de turno en tu ciudad" />
     <meta property="og:description" content="App gratuita para ver la farmacia de turno, emergencias y avisos en tiempo real." />
-    <meta property="og:image" content="https://benfarma.com/assets/og-cover.png" />
+    <meta property="og:image" content="https://benfarma.com/assets/og-cover.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="BenFarma - App de farmacia de turno para Android" />
@@ -28,7 +28,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="BenFarma — Farmacia de turno en tu ciudad" />
     <meta name="twitter:description" content="App gratuita para ver la farmacia de turno, emergencias y avisos en tiempo real." />
-    <meta name="twitter:image" content="https://benfarma.com/assets/og-cover.png" />
+    <meta name="twitter:image" content="https://benfarma.com/assets/og-cover.jpg" />
     <meta name="twitter:image:alt" content="BenFarma - App de farmacia de turno para Android" />
 
     <!-- PWA -->
@@ -42,16 +42,16 @@
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "BenFarma",
-      "operatingSystem": "Android",
+      "operatingSystem": "ANDROID, IOS, WEB",
       "applicationCategory": "HealthApplication",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "ARS" },
       "description": "App gratuita para encontrar la farmacia de turno, emergencias y avisos en tiempo real en tu ciudad.",
       "featureList": "Farmacia de turno, Emergencias, Avisos locales, Widget de pantalla, Notificaciones push",
       "screenshot": [
-        "https://benfarma.com/assets/home.png",
-        "https://benfarma.com/assets/farmacias.png",
-        "https://benfarma.com/assets/detalle.png",
-        "https://benfarma.com/assets/auxilios.png"
+        "https://benfarma.com/assets/home.webp",
+        "https://benfarma.com/assets/farmacias.webp",
+        "https://benfarma.com/assets/detalle.webp",
+        "https://benfarma.com/assets/auxilios.webp"
       ],
       "downloadUrl": "https://play.google.com/store/apps/details?id=com.overcode.farmadolores",
       "url": "https://benfarma.com"
@@ -91,7 +91,7 @@
         {
           "@type": "Question",
           "name": "¿En qué ciudades funciona BenFarma?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Actualmente en Dolores, Chascomús, Las Armas, Las Flores y General Guido (Buenos Aires). Más ciudades se incorporan progresivamente." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Activo en Dolores, Chascomús y Las Flores (Buenos Aires). Próximamente en Las Armas y General Guido. Más ciudades se incorporan progresivamente." }
         },
         {
           "@type": "Question",
@@ -121,8 +121,8 @@
     <link rel="shortcut icon" href="./assets/logo.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="./assets/logo.png" />
     <link rel="manifest" href="./manifest.json" />
-    <link rel="preload" as="image" href="./assets/logo.png" />
-    <link rel="preload" as="image" href="./assets/home.png" />
+    <link rel="preload" as="image" href="./assets/logo.webp" />
+    <link rel="preload" as="image" href="./assets/home.webp" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -130,10 +130,10 @@
     <header class="topbar">
       <div class="container topbar-content">
         <a href="#" class="brand">
-          <img src="./assets/logo.png" alt="Logo BenFarma" class="brand-logo" />
+          <img src="./assets/logo.webp" alt="Logo BenFarma" class="brand-logo" />
           <div>
             <p class="brand-name">BenFarma</p>
-            <p class="brand-tag">Buenos Aires, Argentina</p>
+            <p class="brand-tag">5 ciudades de Buenos Aires</p>
           </div>
         </a>
         <input type="checkbox" id="nav-toggle" class="nav-toggle" />
@@ -146,7 +146,7 @@
           <a href="#ciudades">Ciudades</a>
           <a href="#capturas">Capturas</a>
           <a href="#faq">FAQ</a>
-          <a class="button primary small" href="https://play.google.com/store/apps/details?id=com.overcode.farmadolores" target="_blank" rel="noopener noreferrer">Descargar</a>
+          <a class="button primary small" href="https://play.google.com/store/apps/details?id=com.overcode.farmadolores" target="_blank" rel="noopener noreferrer" data-smart-download>Descargar la app</a>
         </nav>
       </div>
     </header>
@@ -159,16 +159,16 @@
         <div class="hero-glow hero-glow--green" aria-hidden="true"></div>
         <div class="container hero-grid">
           <div class="hero-text fade-in">
-            <p class="eyebrow">App gratuita · Android</p>
-            <h1>Encontrá la farmacia de turno en tu ciudad, <span class="text-gradient">siempre actualizado.</span></h1>
+            <p class="eyebrow">App gratuita</p>
+            <h1>Farmacia de turno al instante, <span class="text-gradient">en 5 ciudades bonaerenses.</span></h1>
             <p class="lead">
-              Información clara y en tiempo real. Consultá turnos, emergencias,
-              locales y avisos importantes en un solo lugar.
+              Sin buscar en grupos de WhatsApp ni llamar para confirmar.
+              Elegí tu ciudad y ya sabés cuál farmacia está de turno ahora.
             </p>
             <div class="cta-row">
-              <a class="button primary" href="https://play.google.com/store/apps/details?id=com.overcode.farmadolores" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-                Google Play
+              <a class="button primary" href="https://play.google.com/store/apps/details?id=com.overcode.farmadolores" target="_blank" rel="noopener noreferrer" data-smart-download>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar la app
               </a>
               <a class="button ghost" href="mailto:benfarmaar@gmail.com">Contactar</a>
             </div>
@@ -184,8 +184,8 @@
               </div>
               <div class="stat-divider"></div>
               <div class="stat">
-                <span class="stat-value">Android</span>
-                <span class="stat-label">Disponible</span>
+                <span class="stat-value">Multiplataforma</span>
+                <span class="stat-label">Android, iOS y Web</span>
               </div>
             </div>
           </div>
@@ -195,7 +195,7 @@
             <div class="phone-mockup">
               <div class="phone-notch"></div>
               <div class="phone-screen">
-                <img src="./assets/home.png" alt="BenFarma - Farmacia de turno" fetchpriority="high" width="360" height="800" />
+                <img src="./assets/home.webp" alt="BenFarma - Farmacia de turno" fetchpriority="high" width="360" height="800" />
               </div>
             </div>
             <div class="phone-float-card">
@@ -220,7 +220,7 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               </div>
               <h3>Descargá la app</h3>
-              <p>Gratis en Google Play para Android. Sin registro obligatorio.</p>
+              <p>Gratis para Android, iPhone o directo desde la web. Sin registro obligatorio.</p>
             </div>
             <div class="step-arrow" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
@@ -328,12 +328,12 @@
               <span class="city-badge active">Activo</span>
             </a>
             <a href="./las-armas/" class="city-card" style="text-decoration:none;color:inherit;">
-              <div class="city-dot"></div>
+              <div class="city-dot dim"></div>
               <div>
                 <p class="city-name">Las Armas</p>
                 <p class="city-prov">Buenos Aires</p>
               </div>
-              <span class="city-badge active">Activo</span>
+              <span class="city-badge">Próximamente</span>
             </a>
             <a href="./las-flores/" class="city-card" style="text-decoration:none;color:inherit;">
               <div class="city-dot"></div>
@@ -344,12 +344,12 @@
               <span class="city-badge active">Activo</span>
             </a>
             <a href="./gral-guido/" class="city-card" style="text-decoration:none;color:inherit;">
-              <div class="city-dot"></div>
+              <div class="city-dot dim"></div>
               <div>
                 <p class="city-name">General Guido</p>
                 <p class="city-prov">Buenos Aires</p>
               </div>
-              <span class="city-badge active">Activo</span>
+              <span class="city-badge">Próximamente</span>
             </a>
           </div>
         </div>
@@ -366,25 +366,25 @@
             <div class="screenshot-phone">
               <div class="screenshot-notch"></div>
               <div class="screenshot-screen">
-                <img src="./assets/farmacias.png" alt="BenFarma - Pantalla de farmacias" loading="lazy" width="720" height="1600" />
+                <img src="./assets/farmacias.webp" alt="BenFarma - Pantalla de farmacias" loading="lazy" width="720" height="1600" />
               </div>
             </div>
             <div class="screenshot-phone">
               <div class="screenshot-notch"></div>
               <div class="screenshot-screen">
-                <img src="./assets/home.png" alt="BenFarma - Farmacia de turno" loading="lazy" width="360" height="800" />
+                <img src="./assets/home.webp" alt="BenFarma - Farmacia de turno" loading="lazy" width="360" height="800" />
               </div>
             </div>
             <div class="screenshot-phone">
               <div class="screenshot-notch"></div>
               <div class="screenshot-screen">
-                <img src="./assets/detalle.png" alt="BenFarma - Detalle de farmacia" loading="lazy" width="720" height="1600" />
+                <img src="./assets/detalle.webp" alt="BenFarma - Detalle de farmacia" loading="lazy" width="720" height="1600" />
               </div>
             </div>
             <div class="screenshot-phone">
               <div class="screenshot-notch"></div>
               <div class="screenshot-screen">
-                <img src="./assets/auxilios.png" alt="BenFarma - Primeros auxilios" loading="lazy" width="720" height="1600" />
+                <img src="./assets/auxilios.webp" alt="BenFarma - Primeros auxilios" loading="lazy" width="720" height="1600" />
               </div>
             </div>
           </div>
@@ -398,14 +398,14 @@
             <div>
               <p class="eyebrow">Disponible ahora</p>
               <h2>Descargá BenFarma</h2>
-              <p class="lead">Gratuito. Sin publicidad molesta. Siempre actualizado.</p>
+              <p class="lead">Gratuito. Sin publicidad molesta. Siempre actualizado. Para Android, iPhone o desde cualquier navegador.</p>
             </div>
             <div class="cta-row">
-              <a class="button primary large" href="https://play.google.com/store/apps/details?id=com.overcode.farmadolores" target="_blank" rel="noopener noreferrer">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-                Google Play
+              <a class="button primary large" href="https://play.google.com/store/apps/details?id=com.overcode.farmadolores" target="_blank" rel="noopener noreferrer" data-smart-download>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar la app
               </a>
-              <span class="button ghost disabled">App Store — próximamente</span>
+              <a class="button ghost" href="https://app.benfarma.com" target="_blank" rel="noopener noreferrer">Abrir en el navegador</a>
             </div>
           </div>
         </div>
@@ -425,7 +425,7 @@
             </details>
             <details>
               <summary>¿En qué ciudades funciona?</summary>
-              <p>Actualmente en Dolores, Chascomús, Las Armas, Las Flores y General Guido (Buenos Aires). Más ciudades se incorporan progresivamente.</p>
+              <p>Activo en Dolores, Chascomús y Las Flores (Buenos Aires). Próximamente en Las Armas y General Guido. Más ciudades se incorporan progresivamente.</p>
             </details>
             <details>
               <summary>¿Cómo envío una sugerencia?</summary>
@@ -449,7 +449,7 @@
       <div class="container footer-grid">
         <div>
           <a href="#" class="brand" style="margin-bottom:8px;display:inline-flex;">
-            <img src="./assets/logo.png" alt="Logo BenFarma" class="brand-logo" loading="lazy" />
+            <img src="./assets/logo.webp" alt="Logo BenFarma" class="brand-logo" loading="lazy" />
             <p class="brand-name">BenFarma</p>
           </a>
           <p class="micro">App de farmacias de turno y servicios locales.</p>
@@ -497,6 +497,17 @@
       const btn = document.getElementById('backTop');
       window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 400), { passive: true });
       btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+      // Descarga inteligente: Android -> Google Play, cualquier otro dispositivo
+      // (iPhone, desktop) -> la web app (app.benfarma.com), que corre en cualquier
+      // plataforma sin instalación desde store.
+      (function () {
+        const isAndroid = /Android/i.test(navigator.userAgent);
+        const target = isAndroid
+          ? 'https://play.google.com/store/apps/details?id=com.overcode.farmadolores'
+          : 'https://app.benfarma.com';
+        document.querySelectorAll('[data-smart-download]').forEach((el) => el.setAttribute('href', target));
+      })();
     </script>
 
   </body>
