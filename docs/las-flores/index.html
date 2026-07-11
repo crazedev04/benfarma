@@ -239,15 +239,12 @@
       window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 400), { passive: true });
       btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-      // Descarga inteligente: Android -> Google Play, cualquier otro dispositivo
-      // (iPhone, desktop) -> la web app (app.benfarma.com), que corre en cualquier
-      // plataforma sin instalación desde store.
+      // "Descargar la app" manda SIEMPRE a la web app (app.benfarma.com),
+      // sin importar el dispositivo (Android, iPhone, desktop). Corre en
+      // cualquier plataforma sin instalar nada desde una store. El link
+      // literal a Google Play queda solo en el footer, explícito aparte.
       (function () {
-        const isAndroid = /Android/i.test(navigator.userAgent);
-        const target = isAndroid
-          ? 'https://play.google.com/store/apps/details?id=com.overcode.farmadolores'
-          : 'https://app.benfarma.com';
-        document.querySelectorAll('[data-smart-download]').forEach((el) => el.setAttribute('href', target));
+        document.querySelectorAll('[data-smart-download]').forEach((el) => el.setAttribute('href', 'https://app.benfarma.com'));
       })();
     </script>
   </body>
