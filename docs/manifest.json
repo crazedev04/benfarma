@@ -4,8 +4,8 @@
   "description": "Farmacia de turno, emergencias y avisos locales en tu ciudad.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#070c12",
-  "theme_color": "#070c12",
+  "background_color": "#f6f8fb",
+  "theme_color": "#f6f8fb",
   "lang": "es-AR",
   "icons": [
     {
